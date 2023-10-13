@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 const Hero = () => {
   return (
@@ -16,11 +18,18 @@ const Hero = () => {
         ></Image>
       </div>
 
-      <p className=' p-3'>
+      <p className=' mx-auto p-3  sm:max-w-md'>
         I'm a Full Stack Developer, specializing in crafting innovative digital
         solutions with a keen focus on intuitive and dynamic user experiences.
       </p>
-      <Button variant='outline'>Button</Button>
+      <div className=''>
+        <Link href={'/'}>
+          <Button>
+            Check out my work
+            <ArrowRight className=' ml-1' />
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 };
