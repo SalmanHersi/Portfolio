@@ -1,17 +1,22 @@
 "use client";
+import Link from 'next/link'
 import { NavigationMenuContent, NavigationMenuList, NavigationMenu, NavigationMenuLink, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuViewport, NavigationMenuIndicator} from "@radix-ui/react-navigation-menu"
 
 
 export const Header = () => {
   return (
 
-<div className="flex justify-between p-5 mx-auto container">
+<div className="flex justify-between p-5 container mx-auto max-w-7xl border-b w-full">
+  <Link href={"/"}>
   <h3>Salman</h3>
-  <li className=" list-none flex gap-3">
-    <a href="">Work</a>
-    <a href="">About</a>
-    <a href="">Contact</a>
-  </li>
+  </Link>
+ <nav className=' flex gap-7'>
+ <Link href={"/Work"}>Work</Link>
+ <Link href={"/About"}>About</Link>
+ <Link href={"/Contact"}>Contact</Link>
+
+ </nav>
+ 
   </div>
 
   )
