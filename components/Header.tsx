@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { RxHamburgerMenu } from 'react-icons/rx';
+import { Menu } from 'lucide-react';
 
 import {
   Sheet,
@@ -25,7 +25,7 @@ export const Header = () => (
         <SheetTrigger>
           {' '}
           <div className='visible text-2xl sm:invisible'>
-            <RxHamburgerMenu />
+            <Menu />
           </div>
         </SheetTrigger>
         <SheetContent className=' w-[60%]'>
