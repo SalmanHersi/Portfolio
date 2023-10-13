@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { AiFillLinkedin } from 'react-icons/Ai';
+import { RxHamburgerMenu } from 'react-icons/rx';
 
 import {
   Sheet,
@@ -10,10 +10,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
-
-import { navigationMenuTriggerStyle } from '@/components/ui/navigation-menu';
-
-import { RxHamburgerMenu } from 'react-icons/rx';
 
 export const Header = () => (
   <div className='container mx-auto flex w-full max-w-7xl justify-between border-b p-5'>
