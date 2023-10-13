@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { AiFillLinkedin } from 'react-icons/Ai';
 
 import {
   Sheet,
@@ -32,7 +33,7 @@ export const Header = () => (
           </div>
         </SheetTrigger>
         <SheetContent className=' w-[60%]'>
-          <div className='mt-5 flex flex-col gap-4 text-center'>
+          <div className='mt-7 flex flex-col gap-8 p-3 text-center'>
             <Link href={'/Work'}>Work</Link>
             <Link href={'/About'}>About</Link>
             <Link href={'/Contact'}>Contact</Link>
