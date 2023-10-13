@@ -15,7 +15,7 @@ export const Header = () => {
  <Link href={"/Work"}>Work</Link>
  <Link href={"/About"}>About</Link>
  <Link href={"/Contact"}>Contact</Link>
- <div className='visible sm:invisible'>
+ <div className='visible sm:invisible text-2xl'>
  <RxHamburgerMenu/>
  </div>
 
