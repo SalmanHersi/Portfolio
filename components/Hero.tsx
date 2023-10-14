@@ -6,29 +6,44 @@ import Link from 'next/link';
 
 const Hero = () => {
   return (
-    <div className='container mx-auto mt-7 flex w-full max-w-7xl flex-col justify-center space-y-5 p-5 text-center'>
-      <h1 className=' text-3xl'>Hello 👋, I'm Salman Hersi</h1>
-      <div className='mx-auto'>
+    <div className='container mx-auto  flex flex-col items-center md:flex-row '>
+      <div className='mx-auto mt-14 flex flex-col items-center justify-center space-y-8 p-6 text-center md:mt-36 md:items-start md:space-y-9 md:text-left md:text-2xl'>
+        <h1 className=' text-3xl md:text-4xl '>Hello 👋, I'm Salman Hersi</h1>
+        <div className=' md:hidden'>
+          <Image
+            className='rounded-full shadow-lg '
+            src={'/imgs/Headshot-Clear 2.jpg'}
+            width={200}
+            height={200}
+            alt='Avatar'
+          ></Image>
+        </div>
+
+        <div className='max-w-sm md:max-w-md md:text-left md:text-2xl'>
+          <p>
+            I'm a Full Stack Developer, specializing in crafting innovative
+            digital solutions with a keen focus on intuitive and dynamic user
+            experiences.
+          </p>
+        </div>
+
+        <div className=''>
+          <Link href={'/'}>
+            <Button>
+              Check out my work
+              <ArrowRight className=' ml-2 w-4' />
+            </Button>
+          </Link>
+        </div>
+      </div>
+      <div className='mx-auto mt-24 hidden md:flex md:items-center md:justify-center'>
         <Image
-          className='rounded-full shadow-lg'
+          className=' rounded-full'
           src={'/imgs/Headshot-Clear 2.jpg'}
-          width={250}
-          height={200}
+          width={350}
+          height={300}
           alt='Avatar'
         ></Image>
-      </div>
-
-      <p className=' mx-auto p-3  sm:max-w-md'>
-        I'm a Full Stack Developer, specializing in crafting innovative digital
-        solutions with a keen focus on intuitive and dynamic user experiences.
-      </p>
-      <div className=''>
-        <Link href={'/'}>
-          <Button>
-            Check out my work
-            <ArrowRight className=' ml-1' />
-          </Button>
-        </Link>
       </div>
     </div>
   );
