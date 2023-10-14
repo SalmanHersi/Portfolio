@@ -9,7 +9,7 @@ const Hero = () => {
     <div className='container mx-auto  flex flex-col items-center md:flex-row '>
       <div className='mx-auto mt-12 flex flex-col items-center justify-center space-y-6 p-3 text-center md:mt-40 md:items-start md:space-y-9 md:text-left md:text-2xl'>
         <h1 className=' text-3xl md:text-4xl '>
-          Hello <span className='animate-pulse'>👋 </span>, I'm Salman Hersi
+          Hello <span className='animate-pulse'>👋</span>, I'm Salman Hersi
         </h1>
         <div className=' md:hidden'>
           <Image
