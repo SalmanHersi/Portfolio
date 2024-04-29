@@ -4,6 +4,9 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Github, Linkedin, Twitter } from 'lucide-react';
 import Link from 'next/link';
 
+const headshot =
+  'https://utfs.io/f/a7590ef0-110c-48ac-9263-ef276546c150-wo8ic4.jpg';
+
 const Hero = () => {
   return (
     <div>
@@ -12,15 +15,7 @@ const Hero = () => {
           <h1 className=' text-3xl md:text-5xl '>
             Hello <span className='animate-pulse'>👋</span>, I'm Salman Hersi
           </h1>
-          <div className=' md:hidden'>
-            <Image
-              className='rounded-full shadow-lg '
-              src={'/imgs/Headshot-Clear 2.jpg'}
-              width={200}
-              height={200}
-              alt='Avatar'
-            ></Image>
-          </div>
+          <div className=' md:hidden'></div>
 
           <div className='max-w-sm text-lg md:max-w-md md:text-left md:text-2xl'>
             <p>
