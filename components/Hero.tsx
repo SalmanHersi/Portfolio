@@ -48,7 +48,7 @@ const Hero = () => {
         <div className='mx-auto mt-24 hidden md:flex md:items-center md:justify-center'>
           <Image
             className='rounded-full'
-            src={'/imgs/Headshot-Clear 2.jpg'}
+            src={headshot}
             width={350}
             height={300}
             alt='Avatar'
