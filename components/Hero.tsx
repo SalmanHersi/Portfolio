@@ -15,7 +15,15 @@ const Hero = () => {
           <h1 className=' text-3xl md:text-5xl '>
             Hello <span className='animate-pulse'>👋</span>, I'm Salman Hersi
           </h1>
-          <div className=' md:hidden'></div>
+          <div className=' md:hidden'>
+            <Image
+              className='rounded-full'
+              src={headshot}
+              width={350}
+              height={300}
+              alt='Avatar'
+            ></Image>
+          </div>
 
           <div className='max-w-sm text-lg md:max-w-md md:text-left md:text-2xl'>
             <p>
