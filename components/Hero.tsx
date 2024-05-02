@@ -9,8 +9,8 @@ const headshot =
 
 const Hero = () => {
   return (
-    <div>
-      <div className=' container  mx-auto flex flex-col items-center md:flex-row '>
+    <div className=' md:h-screen'>
+      <div className=' container  mx-auto flex flex-col items-center  md:flex-row'>
         <div className='mx-auto mt-12 flex flex-col items-center justify-center space-y-7 p-3 text-center md:mt-44 md:items-start md:space-y-10 md:text-left md:text-2xl'>
           <h1 className=' text-3xl md:text-5xl '>
             Hello <span className='animate-pulse'>👋</span>, I'm Salman Hersi
