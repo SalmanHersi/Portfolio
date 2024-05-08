@@ -9,12 +9,15 @@ const headshot =
 
 const Hero = () => {
   return (
-    <div className=' md:h-screen'>
-      <div className=' container  mx-auto flex flex-col items-center  md:flex-row'>
-        <div className='mx-auto mt-12 flex flex-col items-center justify-center space-y-7 p-3 text-center md:mt-44 md:items-start md:space-y-10 md:text-left md:text-2xl'>
-          <h1 className=' text-3xl md:text-5xl '>
-            Hello <span className='animate-pulse'>👋</span>, I'm Salman Hersi
-          </h1>
+    <div className=' '>
+      <div className=' container flex flex-col items-center  md:mx-auto md:flex-row'>
+        <div className=' flex flex-col items-center justify-center space-y-7 p-4 text-center md:items-start md:space-y-10 md:pt-10 md:text-left md:text-2xl'>
+          <h2 className=' scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl '>
+            Salman Hersi
+          </h2>
+          <h2 className=' scroll-m-20  text-3xl font-semibold tracking-tight first:mt-0 '>
+            Full-Stack Developer
+          </h2>
           <div className=' md:hidden'>
             <Image
               className='rounded-full'
@@ -27,9 +30,8 @@ const Hero = () => {
 
           <div className='max-w-sm text-lg md:max-w-md md:text-left md:text-2xl'>
             <p>
-              I'm a Full Stack Developer, specializing in crafting innovative
-              digital solutions with a keen focus on intuitive and dynamic user
-              experiences.
+              I specializing in crafting innovative digital solutions with a
+              keen focus on intuitive and dynamic user experiences.
             </p>
           </div>
 
