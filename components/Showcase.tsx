@@ -16,27 +16,29 @@ export default function Showcase() {
         <h1 className=' scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0 '>
           Recent Projects
         </h1>
-        <Card>
-          <CardHeader>
-            <CardTitle className='w-[500px]'>GitSearch</CardTitle>
-            <CardDescription>
+        <Card className=' md:flex md:p-4'>
+          <CardHeader className='flex gap-8'>
+            <CardTitle className=''>GitSearch</CardTitle>
+            <CardDescription className=' max-w-xl text-xl'>
               GitSearch is an advanced Github search application built with
               React for component-based UIs, Next.js for server-side rendering
               to enhance SEO and performance, and styled with TailwindCSS and
               Chakra UI for a clean, efficient user experience.
             </CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className=''>
             <Image
+              className=' mt-6 w-full rounded-lg
+              '
               src='https://utfs.io/f/11dc0417-5243-4a21-8283-6761a2b32bb0-21uln.png'
               width={500}
               height={500}
-              alt='Picture of the author'
+              alt='Picture of GitSearch Application'
             />
           </CardContent>
-          <CardFooter>
-            <p>Card Footer</p>
-          </CardFooter>
+          {/* <CardFooter>
+            <p>View on GitHub</p>
+          </CardFooter> */}
         </Card>
       </div>
     </div>
