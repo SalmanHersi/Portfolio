@@ -9,8 +9,8 @@ const headshot =
 
 const Hero = () => {
   return (
-    <div className=' '>
-      <div className=' container flex flex-col items-center  md:mx-auto md:flex-row md:pl-20'>
+    <div className='flex items-center justify-center  md:p-6'>
+      <div className='  flex flex-col items-center md:flex-row'>
         <div className='flex flex-col items-center justify-center space-y-7 p-4 text-center md:items-start md:space-y-10 md:pt-10 md:text-left md:text-2xl'>
           <h2 className=' scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl '>
             Salman Hersi
@@ -18,7 +18,7 @@ const Hero = () => {
           <h2 className=' scroll-m-20  text-3xl font-semibold tracking-tight first:mt-0 '>
             Full-Stack Developer
           </h2>
-          <div className=' md:hidden'>
+          <div className='md:hidden '>
             <Image
               className='rounded-full'
               src={headshot}
@@ -55,7 +55,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className='mx-auto mt-24 hidden md:flex md:items-center md:justify-center'>
+        <div className='mx-auto mt-24 hidden  md:ml-28 md:flex md:items-center md:justify-center '>
           <Image
             className='rounded-full'
             src={headshot}
