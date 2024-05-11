@@ -10,8 +10,8 @@ const headshot =
 const Hero = () => {
   return (
     <div className=' '>
-      <div className=' container flex flex-col items-center  md:mx-auto md:flex-row'>
-        <div className=' flex flex-col items-center justify-center space-y-7 p-4 text-center md:items-start md:space-y-10 md:pt-10 md:text-left md:text-2xl'>
+      <div className=' container flex flex-col items-center  md:mx-auto md:flex-row md:pl-20'>
+        <div className='flex flex-col items-center justify-center space-y-7 p-4 text-center md:items-start md:space-y-10 md:pt-10 md:text-left md:text-2xl'>
           <h2 className=' scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl '>
             Salman Hersi
           </h2>
@@ -42,7 +42,7 @@ const Hero = () => {
                 <ArrowRight className=' ml-2 w-4' />
               </Button>
             </Link>
-            <div className='mt-8 flex justify-center space-x-8  md:justify-start'>
+            <div className='mt-8 flex items-end justify-center space-x-8  md:justify-start'>
               <Link href={'https://www.linkedin.com/in/salmanhersi/'}>
                 <Linkedin />
               </Link>

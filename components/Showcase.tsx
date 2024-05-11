@@ -18,7 +18,7 @@ export default function Showcase() {
         <h1 className=' scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0 '>
           Recent Projects
         </h1>
-        <Card className=' md:flex md:p-4'>
+        <Card className=' transform duration-500 ease-in-out hover:scale-105 md:flex md:p-4'>
           <CardHeader className='flex gap-8'>
             <CardTitle className=''>GitSearch</CardTitle>
             <CardDescription className=' max-w-xl text-xl'>
@@ -49,7 +49,7 @@ export default function Showcase() {
             <p>View on GitHub</p>
           </CardFooter> */}
         </Card>
-        <Card className=' md:flex md:p-4'>
+        <Card className=' transform duration-500 ease-in-out hover:scale-105 md:flex md:p-4'>
           <CardHeader className='flex gap-8'>
             <CardTitle className=''>Tiny App</CardTitle>
             <CardDescription className=' max-w-xl text-xl'>
