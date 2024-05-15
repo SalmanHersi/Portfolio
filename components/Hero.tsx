@@ -30,8 +30,9 @@ const Hero = () => {
 
           <div className='max-w-sm text-lg md:max-w-md md:text-left md:text-2xl'>
             <p>
-              I specializing in crafting innovative digital solutions with a
-              keen focus on intuitive and dynamic user experiences.
+              Experienced software engineer specializing in secure, innovative
+              digital solutions with a focus on intuitive, dynamic, and
+              accessible user experiences.
             </p>
           </div>
 
