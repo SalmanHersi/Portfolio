@@ -8,16 +8,19 @@ export default function Experience() {
           Experience
         </h1>
       </div>
-      <div className=' flex max-w-5xl flex-col gap-3'>
-        <div></div>
-        <h3 className='scroll-m-20 text-2xl font-semibold tracking-tight'>
-          E-Commerce Coordinator{' '}
-          <div className=' flex gap-3 '>
+      <div className=' flex max-w-5xl flex-col gap-4 '>
+        <div className='gap-4 md:flex md:items-center'>
+          <div>
+            <h3 className='scroll-m-20 text-2xl font-semibold tracking-tight'>
+              E-Commerce Coordinator{' '}
+            </h3>
+          </div>
+          <div className='inline'>
             <span className='relative rounded bg-muted p-1 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold'>
               Mosaic North America
             </span>
           </div>
-        </h3>
+        </div>
         <div>
           <p className='leading-7 [&:not(:first-child)]:mt-6'>
             Collaborated in a dynamic team to deliver comprehensive web design
@@ -27,13 +30,20 @@ export default function Experience() {
           </p>
         </div>
       </div>
-      <div className='flex max-w-5xl flex-col gap-3 '>
-        <h3 className='scroll-m-20 text-2xl font-semibold tracking-tight'>
-          Software Developer{' '}
-          <span className='relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold'>
-            100 Devs
-          </span>
-        </h3>
+
+      <div className=' flex max-w-5xl flex-col gap-3'>
+        <div className='gap-4 md:flex md:items-center'>
+          <div>
+            <h3 className='scroll-m-20 text-2xl font-semibold tracking-tight'>
+              Software Developer{' '}
+            </h3>
+          </div>
+          <div className='inline'>
+            <span className='relative rounded bg-muted p-1 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold'>
+              100 Devs
+            </span>
+          </div>
+        </div>
         <div>
           <p className='leading-7 [&:not(:first-child)]:mt-6'>
             Worked with a development team to create responsive web applications
@@ -45,13 +55,20 @@ export default function Experience() {
           </p>
         </div>
       </div>
-      <div className='flex max-w-5xl flex-col gap-3 '>
-        <h3 className='scroll-m-20 text-2xl font-semibold tracking-tight'>
-          Analyst
-          <span className='relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold'>
-            Miipe
-          </span>
-        </h3>
+
+      <div className=' flex max-w-5xl flex-col gap-3'>
+        <div className='gap-4 md:flex md:items-center'>
+          <div>
+            <h3 className='scroll-m-20 text-2xl font-semibold tracking-tight'>
+              Analyst{' '}
+            </h3>
+          </div>
+          <div className='inline'>
+            <span className='relative rounded bg-muted p-1 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold'>
+              Miipe
+            </span>
+          </div>
+        </div>
         <div>
           <p className='leading-7 [&:not(:first-child)]:mt-6'>
             Worked with a development team to create responsive web applications

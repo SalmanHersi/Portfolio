@@ -46,7 +46,7 @@ export default function Showcase() {
             />
           </CardContent>
           <div>
-            <MoveUpRight strokeWidth={2.5} className=' ' />
+            <MoveUpRight strokeWidth={2.5} className='hidden md:block ' />
           </div>
           {/* <CardFooter>
             <p>View on GitHub</p>
@@ -82,8 +82,8 @@ export default function Showcase() {
           {/* <CardFooter>
             <p>View on GitHub</p>
           </CardFooter> */}
-          <div className=' text-3xl'>
-            <MoveUpRight strokeWidth={2.5} />
+          <div className='  text-3xl '>
+            <MoveUpRight strokeWidth={2.5} className='hidden md:block' />
           </div>
         </Card>
       </div>
