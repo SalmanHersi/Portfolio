@@ -57,40 +57,43 @@ export default function Showcase() {
           </Card>
         </div>
 
-        <Card className=' max-w-5xl transform duration-500 ease-in-out hover:scale-105 md:flex md:p-4'>
-          <CardHeader className='flex gap-8'>
-            <CardTitle className=''>Tiny App</CardTitle>
-            <CardDescription className='  max-w-md text-xl'>
-              TinyApp is a full-stack web application built with Node.js and
-              Express that allows users to shorten URLs. It uses EJS for dynamic
-              web page rendering, providing a simple solution for managing
-              shortened links.
-            </CardDescription>
-            <div className='flex gap-3'>
-              <Badge className=' px-3 py-1'>HTML</Badge>
-              <Badge className=' px-3 py-1'>CSS</Badge>
-              <Badge className='px-3 py-1 '>Node</Badge>
-              <Badge className=' px-3 py-1'>EJS</Badge>
-              <Badge className='px-3 py-1'>Express</Badge>
-            </div>
-          </CardHeader>
-          <CardContent className=''>
-            <Image
-              className=' mt-6 w-full rounded-md
+        <div className=' w-96 md:w-full '>
+          <Card className=' max-w-5xl transform duration-500 ease-in-out hover:scale-105 md:flex md:p-4'>
+            <CardHeader className='flex gap-8'>
+              <CardTitle className=''>Tiny App</CardTitle>
+              <CardDescription className='  max-w-md text-xl'>
+                TinyApp is a full-stack web application built with Node.js and
+                Express that allows users to shorten URLs. It uses EJS for
+                dynamic web page rendering, providing a simple solution for
+                managing shortened links.
+              </CardDescription>
+              <div className='flex gap-3'>
+                <Badge className=' px-3 py-1'>HTML</Badge>
+                <Badge className=' px-3 py-1'>CSS</Badge>
+                <Badge className='px-3 py-1 '>Node</Badge>
+                <Badge className=' px-3 py-1'>EJS</Badge>
+                <Badge className='px-3 py-1'>Express</Badge>
+              </div>
+            </CardHeader>
+            <CardContent className=''>
+              <Image
+                className=' mt-6 w-full rounded-md
               '
-              src='https://utfs.io/f/98964fde-df72-4151-9cf1-046e9c113bce-euyk5.png'
-              width={500}
-              height={500}
-              alt='Picture of GitSearch Application'
-            />
-          </CardContent>
-          {/* <CardFooter>
+                src='https://utfs.io/f/98964fde-df72-4151-9cf1-046e9c113bce-euyk5.png'
+                width={500}
+                height={500}
+                alt='Picture of GitSearch Application'
+              />
+            </CardContent>
+            {/* <CardFooter>
             <p>View on GitHub</p>
           </CardFooter> */}
-          <div className='  text-3xl '>
-            <MoveUpRight strokeWidth={2.5} className='hidden md:block' />
-          </div>
-        </Card>
+            <div className='  text-3xl '>
+              <MoveUpRight strokeWidth={2.5} className='hidden md:block' />
+            </div>
+          </Card>
+        </div>
+
         <a
           href='https://github.com/SalmanHersi?tab=repositories'
           className='flex items-center justify-center'
