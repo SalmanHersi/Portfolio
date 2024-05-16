@@ -1,8 +1,18 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Github, Linkedin, Mail, Twitter } from 'lucide-react';
 import Link from 'next/link';
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from '@/components/ui/hover-card';
+
+const handleClick = () => {
+  window.location.href = 'mailto:hersi.salman@gmail.com';
+};
 
 const headshot =
   'https://utfs.io/f/46f2e154-587f-4292-b7ef-3924d9bc0373-wo8ga2.png';
@@ -38,7 +48,10 @@ const Hero = () => {
 
           <div className=''>
             <Link href={'/'}>
-              <Button className=' flex items-center justify-center gap-2'>
+              <Button
+                className=' flex items-center justify-center gap-2'
+                onClick={handleClick}
+              >
                 Get in touch with me
                 <Mail className='  w-4' />
                 {/* <ArrowRight className=' ml-2 w-4' /> */}
@@ -58,13 +71,21 @@ const Hero = () => {
           </div>
         </div>
         <div className='mx-auto mt-24 hidden  md:ml-28 md:flex md:items-center md:justify-center '>
-          <Image
-            className='rounded-full'
-            src={headshot}
-            width={350}
-            height={300}
-            alt='Avatar'
-          ></Image>
+          <HoverCard>
+            <HoverCardTrigger>
+              {' '}
+              <Image
+                className='rounded-full'
+                src={headshot}
+                width={350}
+                height={300}
+                alt='Avatar'
+              ></Image>
+            </HoverCardTrigger>
+            <HoverCardContent>
+              Don't ask why my collar is crooked
+            </HoverCardContent>
+          </HoverCard>
         </div>
       </div>
     </div>
