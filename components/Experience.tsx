@@ -16,9 +16,11 @@ export default function Experience() {
             </h3>
           </div>
           <div className='inline'>
-            <span className='relative rounded bg-muted p-1 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold'>
-              Mosaic North America
-            </span>
+            <a href='https://www.mosaic.com/'>
+              <span className='relative rounded bg-muted p-1 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold'>
+                Mosaic North America
+              </span>
+            </a>
           </div>
         </div>
         <div>
@@ -39,9 +41,11 @@ export default function Experience() {
             </h3>
           </div>
           <div className='inline'>
-            <span className='relative rounded bg-muted p-1 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold'>
-              100 Devs
-            </span>
+            <a href='https://100devs.org/'>
+              <span className='relative rounded bg-muted p-1 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold'>
+                100 Devs
+              </span>
+            </a>
           </div>
         </div>
         <div>
@@ -64,9 +68,11 @@ export default function Experience() {
             </h3>
           </div>
           <div className='inline'>
-            <span className='relative rounded bg-muted p-1 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold'>
-              Miipe
-            </span>
+            <a href='https://miipe.com/'>
+              <span className='relative rounded bg-muted p-1 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold'>
+                Miipe
+              </span>
+            </a>
           </div>
         </div>
         <div>

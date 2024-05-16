@@ -5,7 +5,7 @@ import { ArrowRight, Github, Linkedin, Mail, Twitter } from 'lucide-react';
 import Link from 'next/link';
 
 const headshot =
-  'https://utfs.io/f/a7590ef0-110c-48ac-9263-ef276546c150-wo8ic4.jpg';
+  'https://utfs.io/f/46f2e154-587f-4292-b7ef-3924d9bc0373-wo8ga2.png';
 
 const Hero = () => {
   return (
