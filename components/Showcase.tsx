@@ -19,40 +19,44 @@ export default function Showcase() {
         <h1 className=' scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0 md:mx-auto  '>
           Recent Projects
         </h1>
-        <Card className=' mx-auto max-w-5xl transform  duration-500 ease-in-out hover:scale-105 md:flex md:p-4'>
-          <CardHeader className='flex gap-8'>
-            <CardTitle className=''>GitSearch</CardTitle>
-            <CardDescription className='   max-w-md text-xl'>
-              GitSearch is an advanced Github search application built with
-              React for component-based UIs, Next.js for server-side rendering
-              to enhance SEO and performance, and styled with TailwindCSS and
-              Chakra UI for a clean, efficient user experience.
-            </CardDescription>
-            <div className='flex gap-3'>
-              <Badge className=' px-3 py-1'>React</Badge>
-              <Badge className=' px-3 py-1'>CSS</Badge>
-              <Badge className='px-3 py-1 '>Next.js</Badge>
-              <Badge className=' px-3 py-1'>Tailwind</Badge>
-              <Badge className='px-3 py-1'>ChakraUI</Badge>
-            </div>
-          </CardHeader>
-          <CardContent className=''>
-            <Image
-              className=' mt-12 w-full rounded-lg
+
+        <div className=' w-96 md:w-full '>
+          <Card className=' mx-auto max-w-5xl transform  duration-500 ease-in-out hover:scale-105 md:flex md:p-4'>
+            <CardHeader className='flex gap-8'>
+              <CardTitle className=''>GitSearch</CardTitle>
+              <CardDescription className='   max-w-md text-xl'>
+                GitSearch is an advanced Github search application built with
+                React for component-based UIs, Next.js for server-side rendering
+                to enhance SEO and performance, and styled with TailwindCSS and
+                Chakra UI for a clean, efficient user experience.
+              </CardDescription>
+              <div className='flex flex-wrap gap-3 '>
+                <Badge className=' px-3 py-1'>React</Badge>
+                <Badge className=' px-3 py-1'>CSS</Badge>
+                <Badge className='px-3 py-1 '>Next.js</Badge>
+                <Badge className=' px-3 py-1'>Tailwind</Badge>
+                <Badge className='px-3 py-1'>ChakraUI</Badge>
+              </div>
+            </CardHeader>
+            <CardContent className=''>
+              <Image
+                className=' mt-12 w-full rounded-lg
               '
-              src='https://utfs.io/f/11dc0417-5243-4a21-8283-6761a2b32bb0-21uln.png'
-              width={500}
-              height={500}
-              alt='Picture of GitSearch Application'
-            />
-          </CardContent>
-          <div>
-            <MoveUpRight strokeWidth={2.5} className='hidden md:block ' />
-          </div>
-          {/* <CardFooter>
+                src='https://utfs.io/f/11dc0417-5243-4a21-8283-6761a2b32bb0-21uln.png'
+                width={500}
+                height={500}
+                alt='Picture of GitSearch Application'
+              />
+            </CardContent>
+            <div>
+              <MoveUpRight strokeWidth={2.5} className='hidden md:block ' />
+            </div>
+            {/* <CardFooter>
             <p>View on GitHub</p>
           </CardFooter> */}
-        </Card>
+          </Card>
+        </div>
+
         <Card className=' max-w-5xl transform duration-500 ease-in-out hover:scale-105 md:flex md:p-4'>
           <CardHeader className='flex gap-8'>
             <CardTitle className=''>Tiny App</CardTitle>
@@ -91,7 +95,7 @@ export default function Showcase() {
           href='https://github.com/SalmanHersi?tab=repositories'
           className='flex items-center justify-center'
         >
-          <h4 className='scroll-m-20 border-b-2  p-1 text-xl font-semibold tracking-tight '>
+          <h4 className='scroll-m-20 border-b-2  p-1 text-xl font-semibold tracking-tight hover:text-neutral-600'>
             View Full Project Archive
           </h4>
           <ArrowRight />

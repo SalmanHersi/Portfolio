@@ -83,7 +83,7 @@ export default function Experience() {
           href='https://utfs.io/f/e35f8d5b-ff7e-4228-a0a3-2e70ce7be387-gj2iti.pdf'
           className=' flex items-center pt-4'
         >
-          <h4 className='scroll-m-20 border-b-2  p-1 text-xl font-semibold tracking-tight '>
+          <h4 className='  scroll-m-20 border-b-2  p-1 text-xl font-semibold tracking-tight hover:text-neutral-600 '>
             View Full Résumé
           </h4>
           <ArrowUpRight />
