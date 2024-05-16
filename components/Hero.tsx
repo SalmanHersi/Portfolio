@@ -25,7 +25,7 @@ const Hero = () => {
           <h1 className=' scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl '>
             Salman Hersi
           </h1>
-          <h2 className=' scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0'>
+          <h2 className=' scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0'>
             Full-Stack Developer
           </h2>
           <div className='md:hidden '>
