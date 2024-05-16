@@ -8,7 +8,7 @@ export default function Experience() {
           Experience
         </h1>
       </div>
-      <div className=' flex max-w-5xl flex-col gap-4 '>
+      <div className=' flex max-w-5xl flex-col gap-4 border-l-2 pl-6 '>
         <div className='gap-4 md:flex md:items-center'>
           <div>
             <h3 className='scroll-m-20 text-2xl font-semibold tracking-tight'>
@@ -31,10 +31,10 @@ export default function Experience() {
         </div>
       </div>
 
-      <div className=' flex max-w-5xl flex-col gap-3'>
-        <div className='gap-4 md:flex md:items-center'>
+      <div className=' flex max-w-5xl flex-col gap-3 border-l-2 pl-6'>
+        <div className='gap-4 md:flex md:items-center '>
           <div>
-            <h3 className='scroll-m-20 text-2xl font-semibold tracking-tight'>
+            <h3 className='scroll-m-20 text-2xl font-semibold tracking-tight '>
               Software Developer{' '}
             </h3>
           </div>
@@ -56,7 +56,7 @@ export default function Experience() {
         </div>
       </div>
 
-      <div className=' flex max-w-5xl flex-col gap-3'>
+      <div className=' flex max-w-5xl flex-col gap-3 border-l-2 pl-6'>
         <div className='gap-4 md:flex md:items-center'>
           <div>
             <h3 className='scroll-m-20 text-2xl font-semibold tracking-tight'>
