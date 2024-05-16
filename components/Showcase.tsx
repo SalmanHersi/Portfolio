@@ -21,77 +21,114 @@ export default function Showcase() {
         </h1>
 
         <div className=' w-96 md:w-full '>
-          <Card className=' mx-auto max-w-5xl transform  duration-500 ease-in-out hover:scale-105 md:flex md:p-4'>
-            <CardHeader className='flex gap-8'>
-              <CardTitle className=''>GitSearch</CardTitle>
-              <CardDescription className='   max-w-md text-xl'>
-                GitSearch is an advanced Github search application built with
-                React for component-based UIs, Next.js for server-side rendering
-                to enhance SEO and performance, and styled with TailwindCSS and
-                Chakra UI for a clean, efficient user experience.
-              </CardDescription>
-              <div className='flex flex-wrap items-center justify-center gap-3'>
-                <Badge className=' px-3 py-1'>React</Badge>
-                <Badge className=' px-3 py-1'>CSS</Badge>
-                <Badge className='px-3 py-1 '>Next.js</Badge>
-                <Badge className=' px-3 py-1'>Tailwind</Badge>
-                <Badge className='px-3 py-1'>ChakraUI</Badge>
-              </div>
-            </CardHeader>
-            <CardContent className=''>
-              <Image
-                className=' mt-12 w-full rounded-lg
+          <a href='https://github.com/SalmanHersi/GitSearch'>
+            <Card className=' mx-auto max-w-5xl transform  duration-500 ease-in-out hover:scale-105 md:flex md:p-4'>
+              <CardHeader className='flex gap-8'>
+                <CardTitle className=''>GitSearch</CardTitle>
+                <CardDescription className='   max-w-md text-xl'>
+                  GitSearch is an advanced Github search application built with
+                  React for component-based UIs, Next.js for server-side
+                  rendering to enhance SEO and performance, and styled with
+                  TailwindCSS and Chakra UI for a clean, efficient user
+                  experience.
+                </CardDescription>
+                <div className='flex flex-wrap items-center justify-center gap-3'>
+                  <Badge className=' px-3 py-1'>React</Badge>
+                  <Badge className=' px-3 py-1'>CSS</Badge>
+                  <Badge className='px-3 py-1 '>Next.js</Badge>
+                  <Badge className=' px-3 py-1'>Tailwind</Badge>
+                  <Badge className='px-3 py-1'>ChakraUI</Badge>
+                </div>
+              </CardHeader>
+              <CardContent className=''>
+                <Image
+                  className=' mt-12 w-full rounded-lg
               '
-                src='https://utfs.io/f/11dc0417-5243-4a21-8283-6761a2b32bb0-21uln.png'
-                width={500}
-                height={500}
-                alt='Picture of GitSearch Application'
-              />
-            </CardContent>
-            <div>
-              <MoveUpRight strokeWidth={2.5} className='hidden md:block ' />
-            </div>
-            {/* <CardFooter>
+                  src='https://utfs.io/f/11dc0417-5243-4a21-8283-6761a2b32bb0-21uln.png'
+                  width={500}
+                  height={500}
+                  alt='Picture of GitSearch Application'
+                />
+              </CardContent>
+              <div>
+                <MoveUpRight strokeWidth={2.5} className='hidden md:block ' />
+              </div>
+              {/* <CardFooter>
             <p>View on GitHub</p>
           </CardFooter> */}
-          </Card>
+            </Card>
+          </a>
         </div>
 
         <div className=' w-96 md:w-full '>
-          <Card className=' max-w-5xl transform duration-500 ease-in-out hover:scale-105 md:flex md:p-4'>
-            <CardHeader className='flex gap-8'>
-              <CardTitle className=''>Tiny App</CardTitle>
-              <CardDescription className='  max-w-md text-xl'>
-                TinyApp is a full-stack web application built with Node.js and
-                Express that allows users to shorten URLs. It uses EJS for
-                dynamic web page rendering, providing a simple solution for
-                managing shortened links.
-              </CardDescription>
-              <div className='flex flex-wrap items-center justify-center gap-3'>
-                <Badge className=' px-3 py-1'>HTML</Badge>
-                <Badge className=' px-3 py-1'>CSS</Badge>
-                <Badge className='px-3 py-1 '>Node</Badge>
-                <Badge className=' px-3 py-1'>EJS</Badge>
-                <Badge className='px-3 py-1'>Express</Badge>
-              </div>
-            </CardHeader>
-            <CardContent className=''>
-              <Image
-                className=' mt-6 w-full rounded-md
+          <a href='https://github.com/SalmanHersi/tinyapp'>
+            <Card className=' max-w-5xl transform duration-500 ease-in-out hover:scale-105 md:flex md:p-4'>
+              <CardHeader className='flex gap-8'>
+                <CardTitle className=''>Tiny App</CardTitle>
+                <CardDescription className='  max-w-md text-xl'>
+                  TinyApp is a full-stack web application built with Node.js and
+                  Express that allows users to shorten URLs. It uses EJS for
+                  dynamic web page rendering, providing a simple solution for
+                  managing shortened links.
+                </CardDescription>
+                <div className='flex flex-wrap items-center justify-center gap-3'>
+                  <Badge className=' px-3 py-1'>HTML</Badge>
+                  <Badge className=' px-3 py-1'>CSS</Badge>
+                  <Badge className='px-3 py-1 '>Node</Badge>
+                  <Badge className=' px-3 py-1'>EJS</Badge>
+                  <Badge className='px-3 py-1'>Express</Badge>
+                </div>
+              </CardHeader>
+              <CardContent className=''>
+                <Image
+                  className=' mt-6 w-full rounded-md
               '
-                src='https://utfs.io/f/98964fde-df72-4151-9cf1-046e9c113bce-euyk5.png'
-                width={500}
-                height={500}
-                alt='Picture of GitSearch Application'
-              />
-            </CardContent>
-            {/* <CardFooter>
+                  src='https://utfs.io/f/98964fde-df72-4151-9cf1-046e9c113bce-euyk5.png'
+                  width={500}
+                  height={500}
+                  alt='Picture of GitSearch Application'
+                />
+              </CardContent>
+              {/* <CardFooter>
             <p>View on GitHub</p>
           </CardFooter> */}
-            <div className='  text-3xl '>
-              <MoveUpRight strokeWidth={2.5} className='hidden md:block' />
-            </div>
-          </Card>
+              <div className='  text-3xl '>
+                <MoveUpRight strokeWidth={2.5} className='hidden md:block' />
+              </div>
+            </Card>
+          </a>
+        </div>
+        <div className=' w-96 md:w-1/2'>
+          <a href='https://github.com/Angelus-20/resource-wall'>
+            <Card className=' max-w-xl transform duration-500 ease-in-out hover:scale-105 md:flex md:h-1/2  md:p-2'>
+              <CardHeader className='flex gap-4'>
+                <div className='md:flex  md:items-center md:justify-between'>
+                  <CardTitle className=''>Vend</CardTitle>
+                  <div className='  text-3xl '>
+                    <MoveUpRight
+                      strokeWidth={2.5}
+                      className='hidden md:block'
+                    />
+                  </div>
+                </div>
+
+                <CardDescription className='  max-w-md text-lg'>
+                  A dynamic web application for streamlined online buying and
+                  selling, incorporating Express, JSX, Tailwind CSS, and
+                  PostgreSQL. Enabled users to browse, create, categorize, rate,
+                  and favorite deals. Implemented user-friendly features to
+                  elevate the overall user experience.
+                </CardDescription>
+                <div className='flex flex-wrap items-center justify-center gap-3'>
+                  <Badge className=' px-3 py-1'>HTML</Badge>
+                  <Badge className=' px-3 py-1'>Express</Badge>
+                  <Badge className='px-3 py-1 '>PostGres</Badge>
+                  <Badge className=' px-3 py-1'>JSX</Badge>
+                  <Badge className='px-3 py-1'>Tailwind</Badge>
+                </div>
+              </CardHeader>
+            </Card>
+          </a>
         </div>
 
         <a
