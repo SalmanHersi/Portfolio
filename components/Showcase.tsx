@@ -30,7 +30,7 @@ export default function Showcase() {
                 to enhance SEO and performance, and styled with TailwindCSS and
                 Chakra UI for a clean, efficient user experience.
               </CardDescription>
-              <div className='flex flex-wrap gap-3 '>
+              <div className='flex flex-wrap items-center justify-center gap-3'>
                 <Badge className=' px-3 py-1'>React</Badge>
                 <Badge className=' px-3 py-1'>CSS</Badge>
                 <Badge className='px-3 py-1 '>Next.js</Badge>
@@ -67,7 +67,7 @@ export default function Showcase() {
                 dynamic web page rendering, providing a simple solution for
                 managing shortened links.
               </CardDescription>
-              <div className='flex gap-3'>
+              <div className='flex flex-wrap items-center justify-center gap-3'>
                 <Badge className=' px-3 py-1'>HTML</Badge>
                 <Badge className=' px-3 py-1'>CSS</Badge>
                 <Badge className='px-3 py-1 '>Node</Badge>
