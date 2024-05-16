@@ -9,6 +9,7 @@ import {
 
 import { Badge } from '@/components/ui/badge';
 import { MoveUpRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Showcase() {
@@ -86,6 +87,15 @@ export default function Showcase() {
             <MoveUpRight strokeWidth={2.5} className='hidden md:block' />
           </div>
         </Card>
+        <a
+          href='https://github.com/SalmanHersi?tab=repositories'
+          className='flex items-center justify-center'
+        >
+          <h4 className='scroll-m-20 border-b-2  p-1 text-xl font-semibold tracking-tight '>
+            View Full Project Archive
+          </h4>
+          <ArrowRight />
+        </a>
       </div>
     </div>
   );

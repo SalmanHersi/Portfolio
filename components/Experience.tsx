@@ -1,4 +1,4 @@
-import { Dot } from 'lucide-react';
+import { ArrowRight, Dot } from 'lucide-react';
 
 export default function Experience() {
   return (
@@ -79,6 +79,15 @@ export default function Experience() {
             traffic and sales management.
           </p>
         </div>
+        <a
+          href='https://utfs.io/f/e35f8d5b-ff7e-4228-a0a3-2e70ce7be387-gj2iti.pdf'
+          className=' flex items-center pt-4'
+        >
+          <h4 className='scroll-m-20 border-b-2  p-1 text-xl font-semibold tracking-tight '>
+            View Full Résumé
+          </h4>
+          <ArrowRight />
+        </a>
       </div>
     </div>
   );
