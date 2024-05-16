@@ -22,10 +22,10 @@ const Hero = () => {
     <div className='flex items-center justify-center  md:p-6'>
       <div className='  flex flex-col items-center md:flex-row'>
         <div className='flex flex-col items-center justify-center space-y-7 p-4 text-center md:items-start md:space-y-10 md:pt-10 md:text-left md:text-2xl'>
-          <h2 className=' animate-fade-in-up scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl '>
+          <h1 className=' scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl '>
             Salman Hersi
-          </h2>
-          <h2 className=' scroll-m-20  text-3xl font-semibold tracking-tight first:mt-0 '>
+          </h1>
+          <h2 className=' scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0'>
             Full-Stack Developer
           </h2>
           <div className='md:hidden '>
@@ -39,7 +39,7 @@ const Hero = () => {
           </div>
 
           <div className='max-w-sm text-lg md:max-w-md md:text-left md:text-2xl'>
-            <p>
+            <p className='text-xl text-muted-foreground'>
               Experienced software engineer specializing in secure, innovative
               digital solutions with a focus on intuitive, dynamic, and
               accessible user experiences.

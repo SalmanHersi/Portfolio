@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className=' flex items-center justify-center p-8'>
+    <footer className=' flex items-center justify-center p-14'>
       <p className=' max-w-sm text-sm text-muted-foreground'>
         {' '}
         Developed in Visual Studio Code by me. Built using Next.js, Tailwind
