@@ -10,6 +10,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
+import { ModeToggle } from './ui/toggle-mode';
 
 export const Header = () => (
   <div>
@@ -17,7 +18,8 @@ export const Header = () => (
       <Link href={'/'}>
         <h3 className='text-2xl'>Salman</h3>
       </Link>
-      <nav className='invisible flex items-center gap-5 sm:visible'>
+      <ModeToggle />
+      {/* <nav className='invisible flex items-center gap-5 sm:visible'>
         <Link href={'/Work'}>Work</Link>
         <Link href={'/About'}>About</Link>
         <Link href={'/Contact'}>Contact</Link>
@@ -37,7 +39,7 @@ export const Header = () => (
             </div>
           </SheetContent>
         </Sheet>
-      </nav>
+      </nav> */}
     </div>
   </div>
 );
