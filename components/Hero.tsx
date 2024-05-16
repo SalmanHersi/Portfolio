@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Github, Linkedin, Twitter } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail, Twitter } from 'lucide-react';
 import Link from 'next/link';
 
 const headshot =
@@ -38,9 +38,10 @@ const Hero = () => {
 
           <div className=''>
             <Link href={'/'}>
-              <Button>
-                Get in touch with me!
-                <ArrowRight className=' ml-2 w-4' />
+              <Button className=' flex items-center justify-center gap-2'>
+                Get in touch with me
+                <Mail className='  w-4' />
+                {/* <ArrowRight className=' ml-2 w-4' /> */}
               </Button>
             </Link>
             <div className='mt-8 flex items-end justify-center space-x-8  md:justify-start'>
