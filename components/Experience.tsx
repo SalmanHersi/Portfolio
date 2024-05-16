@@ -1,4 +1,4 @@
-import { ArrowRight, Dot } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Dot } from 'lucide-react';
 
 export default function Experience() {
   return (
@@ -86,7 +86,7 @@ export default function Experience() {
           <h4 className='scroll-m-20 border-b-2  p-1 text-xl font-semibold tracking-tight '>
             View Full Résumé
           </h4>
-          <ArrowRight />
+          <ArrowUpRight />
         </a>
       </div>
     </div>
