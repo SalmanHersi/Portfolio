@@ -12,23 +12,49 @@ export default function Experience() {
         <div className='gap-4 md:flex md:items-center'>
           <div>
             <h3 className='scroll-m-20 text-2xl font-semibold tracking-tight'>
-              IT Support{' '}
+              Network Specialist{' '}
             </h3>
           </div>
           <div className='inline'>
-            <a href='https://www.mosaic.com/'>
+            <a href='https://silfarlabs.com/'>
               <span className='relative rounded bg-muted p-1 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold'>
-                Mosaic North America
+                Silfar Labs
               </span>
             </a>
           </div>
         </div>
         <div>
           <p className='leading-7 [&:not(:first-child)]:mt-6'>
-            Collaborated in a dynamic team to deliver comprehensive web design
-            solutions, including e-commerce platforms and cybersecurity, serving
-            250 clients across various industries, and conducted personalized
-            consultations to optimize their digital storefronts.
+            First point of contact for 100+ employees, resolving 30+ weekly macOS, Google Workspace, and Slack issues with 95% satisfaction rate.
+            Deployed JAMF MDM to automate device provisioning, reducing onboarding setup time by 25%.
+            Streamlined onboarding/offboarding via ServiceNow, managing hardware deployment, access rights (Okta SSO), and asset tracking.
+            Diagnosed and escalated critical infrastructure outages (WiFi, Zscaler VPN) to engineering teams, maintaining 99% SLA compliance.
+            Reduced ticket volume by 25% and improved team efficiency by 20% through centralized IT knowledge base.
+          </p>
+        </div>
+      </div>
+
+      <div className=' flex max-w-5xl flex-col gap-4 border-l-2 pl-6 '>
+        <div className='gap-4 md:flex md:items-center'>
+          <div>
+            <h3 className='scroll-m-20 text-2xl font-semibold tracking-tight'>
+              IT Support{' '}
+            </h3>
+          </div>
+          <div className='inline'>
+            <a href='https://www.mosaic.com/'>
+              <span className='relative rounded bg-muted p-1 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold'>
+               100 Devs
+              </span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p className='leading-7 [&:not(:first-child)]:mt-6'>
+            Supported macOS environments, resolving compatibility issues for 50+ employees and deploying security updates via JAMF.
+            Administered enterprise applications (Okta, Google Workspace), including SSO setup and troubleshooting user access issues.
+            Collaborated on change management processes for web application releases, ensuring zero downtime during deployments.
+            Conducted employee training sessions for new software deployments, improving user proficiency and reducing support tickets by 20%.
           </p>
         </div>
       </div>
@@ -37,25 +63,21 @@ export default function Experience() {
         <div className='gap-4 md:flex md:items-center '>
           <div>
             <h3 className='scroll-m-20 text-2xl font-semibold tracking-tight '>
-              Software Developer{' '}
+              IT Analyst{' '}
             </h3>
           </div>
           <div className='inline'>
-            <a href='https://100devs.org/'>
+            <a href='https://www.mosaic.com/'>
               <span className='relative rounded bg-muted p-1 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold'>
-                100 Devs
+              Mosaic North America
               </span>
             </a>
           </div>
         </div>
         <div>
           <p className='leading-7 [&:not(:first-child)]:mt-6'>
-            Worked with a development team to create responsive web applications
-            using best practices and SCRUM methodologies. Developed full-stack
-            applications and backend APIs to enhance front-end performance.
-            Communicated with clients to optimize web presence and user
-            experience, while building customized websites that improve site
-            traffic and sales management.
+            Provided remote support for 250+ clients, resolving Salesforce, Slack, and VPN connectivity issues.
+            Implemented 2FA and Zscaler VPN protocols, reducing security breaches by 40%.
           </p>
         </div>
       </div>
@@ -77,16 +99,12 @@ export default function Experience() {
         </div>
         <div>
           <p className='leading-7 [&:not(:first-child)]:mt-6'>
-            Worked with a development team to create responsive web applications
-            using best practices and SCRUM methodologies. Developed full-stack
-            applications and backend APIs to enhance front-end performance.
-            Communicated with clients to optimize web presence and user
-            experience, while building customized websites that improve site
-            traffic and sales management.
+            Managed 150+ macOS/Windows devices via ServiceNow, achieving 100% audit compliance.
+            Created user guides and testing documentation, improving troubleshooting efficiency by 30%.
           </p>
         </div>
         <a
-          href='https://utfs.io/f/e35f8d5b-ff7e-4228-a0a3-2e70ce7be387-gj2iti.pdf'
+          href='https://utfs.io/f/5mHFO6Bp0KeYyliAliImN3jdKLuftVcPGr2U8BST5Qhv1iyb'
           className=' flex items-center pt-4'
         >
           <h4 className='  scroll-m-20 border-b-2  p-1 text-xl font-semibold tracking-tight hover:text-neutral-600 '>

@@ -26,7 +26,7 @@ const Hero = () => {
             Salman Hersi
           </h1>
           <h2 className=' scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0'>
-            Full-Stack Developer
+          IT Solutions Architect
           </h2>
           <div className='md:hidden '>
             <Image
@@ -40,9 +40,7 @@ const Hero = () => {
 
           <div className='max-w-sm text-lg md:max-w-md md:text-left md:text-2xl'>
             <p className='text-xl text-muted-foreground'>
-              Experienced software engineer specializing in secure, innovative
-              digital solutions with a focus on intuitive, dynamic, and
-              accessible user experiences.
+            Specializing in secure, scalable software development with a focus on accessibility, dynamic design, and cutting-edge innovation
             </p>
           </div>
 
