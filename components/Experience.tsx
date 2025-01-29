@@ -12,7 +12,7 @@ export default function Experience() {
         <div className='gap-4 md:flex md:items-center'>
           <div>
             <h3 className='scroll-m-20 text-2xl font-semibold tracking-tight'>
-              E-Commerce Coordinator{' '}
+              IT Support{' '}
             </h3>
           </div>
           <div className='inline'>
