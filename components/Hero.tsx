@@ -29,13 +29,13 @@ const Hero = () => {
           IT Solutions Architect
           </h2>
           <div className='md:hidden '>
-            <Image
+            {/* <Image
               className='rounded-full'
               src={headshot}
               width={350}
               height={300}
               alt='Avatar'
-            ></Image>
+            ></Image> */}
           </div>
 
           <div className='max-w-sm text-lg md:max-w-md md:text-left md:text-2xl'>
@@ -72,13 +72,13 @@ const Hero = () => {
           <HoverCard>
             <HoverCardTrigger>
               {' '}
-              <Image
+              {/* <Image
                 className='rounded-full'
                 src={headshot}
                 width={350}
                 height={300}
                 alt='Avatar'
-              ></Image>
+              ></Image> */}
             </HoverCardTrigger>
             <HoverCardContent>
               Don't ask why my collar is crooked
