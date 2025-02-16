@@ -12,132 +12,115 @@ import { MoveUpRight } from 'lucide-react';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 
+
 export default function Showcase() {
   return (
-    <div className='flex flex-col items-center justify-center   md:flex-row'>
-      <div className=' flex flex-col items-center justify-center space-y-7 p-4 text-center md:items-start md:space-y-10 md:pt-10 md:text-left md:text-2xl'>
-        <h1 className=' scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0 md:mx-auto  '>
+    <div className='container mx-auto px-4'>
+      <div className='flex flex-col items-center space-y-8 py-8'>
+        <h1 className='scroll-m-20 text-3xl font-semibold tracking-tight'>
           Recent Projects
         </h1>
 
-        <div className=' w-96 md:w-full '>
+        <div className='grid gap-8 w-full max-w-5xl'>
           <a href='https://github.com/SalmanHersi/GitSearch'>
-            <Card className=' mx-auto max-w-5xl transform  duration-500 ease-in-out hover:scale-105 md:flex md:p-4'>
-              <CardHeader className='flex gap-8'>
-                <CardTitle className=''>GitSearch</CardTitle>
-                <CardDescription className='   max-w-md text-xl'>
-                  GitSearch is an advanced Github search application built with
-                  React for component-based UIs, Next.js for server-side
-                  rendering to enhance SEO and performance, and styled with
-                  TailwindCSS and Chakra UI for a clean, efficient user
-                  experience.
-                </CardDescription>
-                <div className='flex flex-wrap items-center justify-center gap-3'>
-                  <Badge className=' px-3 py-1'>React</Badge>
-                  <Badge className=' px-3 py-1'>CSS</Badge>
-                  <Badge className='px-3 py-1 '>Next.js</Badge>
-                  <Badge className=' px-3 py-1'>Tailwind</Badge>
-                  <Badge className='px-3 py-1'>ChakraUI</Badge>
-                </div>
-              </CardHeader>
-              <CardContent className=''>
-                <Image
-                  className=' mt-12 w-full rounded-lg
-              '
-                  src='https://utfs.io/f/11dc0417-5243-4a21-8283-6761a2b32bb0-21uln.png'
-                  width={500}
-                  height={500}
-                  alt='Picture of GitSearch Application'
-                />
-              </CardContent>
-              <div>
-                <MoveUpRight strokeWidth={2.5} className='hidden md:block ' />
-              </div>
-              {/* <CardFooter>
-            <p>View on GitHub</p>
-          </CardFooter> */}
-            </Card>
-          </a>
-        </div>
-
-        <div className=' w-96 md:w-full '>
-          <a href='https://github.com/SalmanHersi/tinyapp'>
-            <Card className=' max-w-5xl transform duration-500 ease-in-out hover:scale-105 md:flex md:p-4'>
-              <CardHeader className='flex gap-8'>
-                <CardTitle className=''>Tiny App</CardTitle>
-                <CardDescription className='  max-w-md text-xl'>
-                  TinyApp is a full-stack web application built with Node.js and
-                  Express that allows users to shorten URLs. It uses EJS for
-                  dynamic web page rendering, providing a simple solution for
-                  managing shortened links.
-                </CardDescription>
-                <div className='flex flex-wrap items-center justify-center gap-3'>
-                  <Badge className=' px-3 py-1'>HTML</Badge>
-                  <Badge className=' px-3 py-1'>CSS</Badge>
-                  <Badge className='px-3 py-1 '>Node</Badge>
-                  <Badge className=' px-3 py-1'>EJS</Badge>
-                  <Badge className='px-3 py-1'>Express</Badge>
-                </div>
-              </CardHeader>
-              <CardContent className=''>
-                <Image
-                  className=' mt-6 w-full rounded-md
-              '
-                  src='https://utfs.io/f/98964fde-df72-4151-9cf1-046e9c113bce-euyk5.png'
-                  width={500}
-                  height={500}
-                  alt='Picture of GitSearch Application'
-                />
-              </CardContent>
-              {/* <CardFooter>
-            <p>View on GitHub</p>
-          </CardFooter> */}
-              <div className='  text-3xl '>
-                <MoveUpRight strokeWidth={2.5} className='hidden md:block' />
-              </div>
-            </Card>
-          </a>
-        </div>
-        <div className=' w-96 md:w-1/2'>
-          <a href='https://github.com/Angelus-20/resource-wall'>
-            <Card className=' max-w-xl transform duration-500 ease-in-out hover:scale-105 md:flex md:h-1/2  md:p-2'>
-              <CardHeader className='flex gap-4'>
-                <div className='md:flex  md:items-center md:justify-between'>
-                  <CardTitle className=''>Vend</CardTitle>
-                  <div className='  text-3xl '>
-                    <MoveUpRight
-                      strokeWidth={2.5}
-                      className='hidden md:block'
+            <Card className='transform duration-500 ease-in-out hover:scale-105'>
+              <div className='flex flex-col md:flex-row md:items-center relative'>
+                <CardHeader className='flex-1 space-y-6 p-6'>
+                  <CardTitle className='text-2xl'>GitSearch</CardTitle>
+                  <CardDescription className='text-lg'>
+                    GitSearch is an advanced Github search application built with
+                    React for component-based UIs, Next.js for server-side
+                    rendering to enhance SEO and performance, and styled with
+                    TailwindCSS and Chakra UI for a clean, efficient user
+                    experience.
+                  </CardDescription>
+                  <div className='flex flex-wrap gap-3'>
+                    <Badge className='px-3 py-1'>React</Badge>
+                    <Badge className='px-3 py-1'>CSS</Badge>
+                    <Badge className='px-3 py-1'>Next.js</Badge>
+                    <Badge className='px-3 py-1'>Tailwind</Badge>
+                    <Badge className='px-3 py-1'>ChakraUI</Badge>
+                  </div>
+                </CardHeader>
+                <CardContent className='p-6 md:w-1/2'>
+                  <div className='relative aspect-video w-full'>
+                    <Image
+                      className='rounded-lg'
+                      src='https://utfs.io/f/11dc0417-5243-4a21-8283-6761a2b32bb0-21uln.png'
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      alt='Picture of GitSearch Application'
                     />
                   </div>
-                </div>
+                </CardContent>
+              </div>
+            </Card>
+          </a>
 
-                <CardDescription className='  max-w-md text-lg'>
+          <a href='https://github.com/SalmanHersi/tinyapp'>
+            <Card className='transform duration-500 ease-in-out hover:scale-105'>
+              <div className='flex flex-col md:flex-row md:items-center relative'>
+                <CardHeader className='flex-1 space-y-6 p-6'>
+                  <CardTitle className='text-2xl'>Tiny App</CardTitle>
+                  <CardDescription className='text-lg'>
+                    TinyApp is a full-stack web application built with Node.js and
+                    Express that allows users to shorten URLs. It uses EJS for
+                    dynamic web page rendering, providing a simple solution for
+                    managing shortened links.
+                  </CardDescription>
+                  <div className='flex flex-wrap gap-3'>
+                    <Badge className='px-3 py-1'>HTML</Badge>
+                    <Badge className='px-3 py-1'>CSS</Badge>
+                    <Badge className='px-3 py-1'>Node</Badge>
+                    <Badge className='px-3 py-1'>EJS</Badge>
+                    <Badge className='px-3 py-1'>Express</Badge>
+                  </div>
+                </CardHeader>
+                <CardContent className='p-6 md:w-1/2'>
+                  <div className='relative aspect-video w-full'>
+                    <Image
+                      className='rounded-lg'
+                      src='https://utfs.io/f/98964fde-df72-4151-9cf1-046e9c113bce-euyk5.png'
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      alt='Picture of TinyApp Application'
+                    />
+                  </div>
+                </CardContent>
+              </div>
+            </Card>
+          </a>
+
+          <a href='https://github.com/Angelus-20/resource-wall'>
+            <Card className='transform duration-500 ease-in-out hover:scale-105'>
+              <div className='flex flex-col p-6 space-y-6 relative'>
+                <div className='flex items-center justify-between'>
+                  <CardTitle className='text-2xl'>Vend</CardTitle>
+                </div>
+                <CardDescription className='text-lg'>
                   A dynamic web application for streamlined online buying and
                   selling, incorporating Express, JSX, Tailwind CSS, and
                   PostgreSQL. Enabled users to browse, create, categorize, rate,
                   and favorite deals. Implemented user-friendly features to
                   elevate the overall user experience.
                 </CardDescription>
-                <div className='flex flex-wrap items-center justify-center gap-3'>
-                  <Badge className=' px-3 py-1'>HTML</Badge>
-                  <Badge className=' px-3 py-1'>Express</Badge>
-                  <Badge className='px-3 py-1 '>PostGres</Badge>
-                  <Badge className=' px-3 py-1'>JSX</Badge>
+                <div className='flex flex-wrap gap-3'>
+                  <Badge className='px-3 py-1'>HTML</Badge>
+                  <Badge className='px-3 py-1'>Express</Badge>
+                  <Badge className='px-3 py-1'>PostGres</Badge>
+                  <Badge className='px-3 py-1'>JSX</Badge>
                   <Badge className='px-3 py-1'>Tailwind</Badge>
                 </div>
-              </CardHeader>
+              </div>
             </Card>
           </a>
         </div>
 
         <a
           href='https://github.com/SalmanHersi?tab=repositories'
-          className='flex items-center justify-center'
+          className='flex items-center gap-2 border-b-2 p-1 text-xl font-semibold hover:text-neutral-600'
         >
-          <h4 className='scroll-m-20 border-b-2  p-1 text-xl font-semibold tracking-tight hover:text-neutral-600'>
-            View Full Project Archive
-          </h4>
+          <span>View Full Project Archive</span>
           <ArrowRight />
         </a>
       </div>
