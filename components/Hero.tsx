@@ -26,7 +26,7 @@ const Hero = () => {
             Salman Hersi
           </h1>
           <h2 className=' scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0'>
-          IT Solutions Architect
+          Security Analyst
           </h2>
           <div className='md:hidden '>
             <Image
@@ -40,7 +40,7 @@ const Hero = () => {
 
           <div className='max-w-sm text-lg md:max-w-md md:text-left md:text-2xl'>
             <p className='text-xl text-muted-foreground'>
-            Specializing in secure, scalable software development with a focus on accessibility, dynamic design, and cutting-edge innovation
+            Specializing in vulnerability assessment, threat detection, and risk mitigation to protect digital assets. With CompTIA Security+ certification and proven results in reducing breaches by up to 40%, I deliver secure, innovative solutions for scalable environments
             </p>
           </div>
 
