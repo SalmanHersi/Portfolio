@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
 import Link from 'next/link';
 import {
   HoverCard,
@@ -14,8 +14,6 @@ const handleClick = () => {
   window.location.href = 'mailto:hersi.salman@gmail.com';
 };
 
-const headshot =
-  'https://utfs.io/f/46f2e154-587f-4292-b7ef-3924d9bc0373-wo8ga2.png';
 
 const Hero = () => {
   return (
@@ -31,7 +29,7 @@ const Hero = () => {
           <div className='md:hidden '>
             <Image
               className='rounded-full'
-              src={headshot}
+              src='/imgs/headshot.jpg'
               width={350}
               height={300}
               alt='Avatar'
@@ -52,7 +50,6 @@ const Hero = () => {
               >
                 Get in touch with me
                 <Mail className='  w-4' />
-                {/* <ArrowRight className=' ml-2 w-4' /> */}
               </Button>
             </Link>
             <div className='mt-8 flex items-end justify-center space-x-8  md:justify-start'>
@@ -74,7 +71,7 @@ const Hero = () => {
               {' '}
               <Image
                 className='rounded-full'
-                src={headshot}
+                src='/imgs/headshot.jpg'
                 width={350}
                 height={300}
                 alt='Avatar'
