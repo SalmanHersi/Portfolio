@@ -39,10 +39,7 @@ const Hero = () => {
           </div>
 
           <p className="max-w-md text-lg text-muted-foreground">
-            Specializing in vulnerability assessment, threat detection, and risk
-            mitigation to protect digital assets. With CompTIA Security+
-            certification and proven results in reducing breaches by up to 40%,
-            I deliver secure, innovative solutions for scalable environments.
+            Cloud security consultant with hands-on experience designing Zero Trust architectures, hardening AWS environments, and building secure systems from the ground up.
           </p>
 
           <div className="flex flex-col items-center gap-6 md:items-start">
