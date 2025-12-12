@@ -6,8 +6,8 @@ import { ThemeProvider } from '@/components/theme-provider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Salman Hersi - Security Analyst',
-  description: 'Security Analyst specializing in vulnerability assessment, threat detection, and risk mitigation. CompTIA Security+ certified.',
+  title: 'Salman Hersi - Security Guy',
+  description: 'Security Guy specializing in vulnerability assessment, threat detection, and risk mitigation. CompTIA Security+ certified.',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',

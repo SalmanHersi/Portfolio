@@ -24,7 +24,7 @@ const Hero = () => {
             Salman Hersi
           </h1>
           <h2 className="text-2xl font-semibold tracking-tight text-muted-foreground md:text-3xl">
-            Security Analyst
+            Security Guy
           </h2>
 
           {/* Mobile Image */}
