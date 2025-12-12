@@ -14,68 +14,79 @@ const handleClick = () => {
   window.location.href = 'mailto:hersi.salman@gmail.com';
 };
 
-
 const Hero = () => {
   return (
-    <div className='flex items-center justify-center  md:p-6'>
-      <div className='  flex flex-col items-center md:flex-row'>
-        <div className='flex flex-col items-center justify-center space-y-7 p-4 text-center md:items-start md:space-y-10 md:pt-10 md:text-left md:text-2xl'>
-          <h1 className=' scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl '>
+    <section className="py-16 md:py-24">
+      <div className="flex flex-col items-center gap-10 md:flex-row md:items-center md:justify-between">
+        {/* Text Content */}
+        <div className="flex flex-col items-center space-y-6 text-center md:items-start md:text-left">
+          <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">
             Salman Hersi
           </h1>
-          <h2 className=' scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0'>
-          Security Analyst
+          <h2 className="text-2xl font-semibold tracking-tight text-muted-foreground md:text-3xl">
+            Security Analyst
           </h2>
-          <div className='md:hidden '>
+
+          {/* Mobile Image */}
+          <div className="md:hidden">
             <Image
-              className='rounded-full'
-              src='/imgs/headshot.jpg'
-              width={350}
-              height={300}
-              alt='Avatar'
-            ></Image>
+              className="rounded-full"
+              src="/imgs/headshot.jpg"
+              width={280}
+              height={280}
+              alt="Salman Hersi"
+            />
           </div>
 
-          <div className='max-w-sm text-lg md:max-w-md md:text-left md:text-2xl'>
-            <p className='text-xl text-muted-foreground'>
-            Specializing in vulnerability assessment, threat detection, and risk mitigation to protect digital assets. With CompTIA Security+ certification and proven results in reducing breaches by up to 40%, I deliver secure, innovative solutions for scalable environments
-            </p>
-          </div>
+          <p className="max-w-md text-lg text-muted-foreground">
+            Specializing in vulnerability assessment, threat detection, and risk
+            mitigation to protect digital assets. With CompTIA Security+
+            certification and proven results in reducing breaches by up to 40%,
+            I deliver secure, innovative solutions for scalable environments.
+          </p>
 
-          <div className=''>
-            <Link href={'/'}>
-              <Button
-                className=' flex items-center justify-center gap-2'
-                onClick={handleClick}
-              >
+          <div className="flex flex-col items-center gap-6 md:items-start">
+            <Link href="/">
+              <Button onClick={handleClick} className="gap-2">
                 Get in touch with me
-                <Mail className='  w-4' />
+                <Mail className="h-4 w-4" />
               </Button>
             </Link>
-            <div className='mt-8 flex items-end justify-center space-x-8  md:justify-start'>
-              <Link href={'https://www.linkedin.com/in/salmanhersi/'}>
-                <Linkedin />
+
+            <div className="flex items-center gap-6">
+              <Link
+                href="https://www.linkedin.com/in/salmanhersi/"
+                className="text-muted-foreground transition-colors hover:text-foreground"
+              >
+                <Linkedin className="h-5 w-5" />
               </Link>
-              <Link href={'https://github.com/SalmanHersi'}>
-                <Github />
+              <Link
+                href="https://github.com/SalmanHersi"
+                className="text-muted-foreground transition-colors hover:text-foreground"
+              >
+                <Github className="h-5 w-5" />
               </Link>
-              <Link href={'https://twitter.com/namlase'}>
-                <Twitter />
+              <Link
+                href="https://twitter.com/namlase"
+                className="text-muted-foreground transition-colors hover:text-foreground"
+              >
+                <Twitter className="h-5 w-5" />
               </Link>
             </div>
           </div>
         </div>
-        <div className='mx-auto mt-24 hidden  md:ml-28 md:flex md:items-center md:justify-center '>
+
+        {/* Desktop Image */}
+        <div className="hidden flex-shrink-0 md:block">
           <HoverCard>
             <HoverCardTrigger>
-              {' '}
               <Image
-                className='rounded-full'
-                src='/imgs/headshot.jpg'
-                width={350}
+                className="rounded-full"
+                src="/imgs/headshot.jpg"
+                width={300}
                 height={300}
-                alt='Avatar'
-              ></Image>
+                alt="Salman Hersi"
+              />
             </HoverCardTrigger>
             <HoverCardContent>
               Don't ask why my collar is crooked
@@ -83,7 +94,7 @@ const Hero = () => {
           </HoverCard>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
