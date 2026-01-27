@@ -80,7 +80,7 @@ export default function Projects() {
 
       {/* CISSP Article */}
       <Link
-        href="#"
+        href="/writing/cissp"
         className="group flex items-center justify-between rounded-2xl border border-border bg-card p-5 md:p-6 w-full transition-all hover:border-foreground/20"
       >
         <div>
