@@ -1,23 +1,25 @@
 import React from 'react';
-import { Button } from './ui/button';
-import { ExternalLink, Sparkles } from 'lucide-react';
+// import { Button } from './ui/button';
+// import { ExternalLink, Sparkles } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Projects() {
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-10 md:py-14">
       <div className="mb-12 flex items-center gap-4">
         <span
           className="text-xs font-medium tracking-[0.3em] uppercase text-foreground"
           style={{ fontFamily: 'var(--font-mono)' }}
         >
-          Projects
+          Writing
         </span>
         <div className="h-px flex-1 bg-border" />
       </div>
 
-      <div className="group relative max-w-2xl rounded-2xl border border-border bg-card p-5 md:p-6 transition-all hover:border-foreground/20">
-        {/* Header */}
+      {/* DonorClaim - commented out for now */}
+      {/*
+      <div className="group relative w-full rounded-2xl border border-border bg-card p-5 md:p-6 transition-all hover:border-foreground/20">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <div className="flex items-center gap-3 mb-2">
@@ -42,19 +44,13 @@ export default function Projects() {
             </Button>
           </Link>
         </div>
-
-        {/* Divider */}
         <div className="my-4 h-px bg-border" />
-
-        {/* Description */}
         <p className="text-sm text-muted-foreground leading-relaxed mb-5">
           A full-stack AI-powered SaaS platform that automates donation tracking
           and CRA-compliant tax receipt generation for Canadian nonprofits. Uses
           AI to intelligently parse e-transfer notifications and match donations
           to donor profiles.
         </p>
-
-        {/* Tech tags */}
         <div className="flex flex-wrap gap-1.5 mb-5">
           {['Next.js', 'TypeScript', 'OpenAI', 'Stripe API', 'PostgreSQL', 'Tailwind CSS', 'Vercel'].map((tech) => (
             <span
@@ -66,8 +62,6 @@ export default function Projects() {
             </span>
           ))}
         </div>
-
-        {/* Features */}
         <ul className="space-y-2.5 text-sm text-muted-foreground">
           {[
             'AI-powered parsing of bank e-transfer notifications for automatic data extraction',
@@ -82,6 +76,19 @@ export default function Projects() {
           ))}
         </ul>
       </div>
+      */}
+
+      {/* CISSP Article */}
+      <Link
+        href="#"
+        className="group flex items-center justify-between rounded-2xl border border-border bg-card p-5 md:p-6 w-full transition-all hover:border-foreground/20"
+      >
+        <div>
+          <p className="text-sm text-muted-foreground mb-1" style={{ fontFamily: 'var(--font-mono)' }}>Article</p>
+          <h3 className="text-lg font-semibold group-hover:underline">How I&apos;m studying for my CISSP</h3>
+        </div>
+        <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-transform group-hover:text-foreground group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+      </Link>
     </section>
   );
 }

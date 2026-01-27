@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const Hero = () => {
   return (
-    <section className="relative py-24 md:py-36">
+    <section className="relative py-16 md:py-24">
       <div className="relative flex flex-col items-center gap-14 md:flex-row md:items-center md:justify-between">
         {/* Text Content */}
         <div className="flex flex-col items-center space-y-7 text-center md:items-start md:text-left">
