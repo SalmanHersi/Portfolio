@@ -1,13 +1,23 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { JetBrains_Mono, Outfit } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
+import { Header } from '@/components/Header';
 
-const inter = Inter({ subsets: ['latin'] });
+const outfit = Outfit({
+  subsets: ['latin'],
+  variable: '--font-outfit',
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+});
 
 export const metadata: Metadata = {
   title: 'Salman Hersi - Security Guy',
-  description: 'Security Guy specializing in vulnerability assessment, threat detection, and risk mitigation. CompTIA Security+ certified.',
+  description:
+    'Security Guy specializing in vulnerability assessment, threat detection, and risk mitigation. CompTIA Security+ certified.',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
@@ -21,15 +31,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
-      <body className={inter.className}>
-        {' '}
+    <html lang="en" suppressHydrationWarning className={`${outfit.variable} ${jetbrains.variable}`}>
+      <body className="font-sans antialiased" style={{ fontFamily: 'var(--font-outfit), system-ui, sans-serif' }}>
         <ThemeProvider
-          attribute='class'
-          defaultTheme='system'
-          enableSystem
-          disableTransitionOnChange
+          attribute="class"
+          defaultTheme="dark"
         >
+          <Header />
           {children}
         </ThemeProvider>
       </body>
