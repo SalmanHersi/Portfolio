@@ -25,6 +25,9 @@ export default function CISSPArticle() {
             <h1 className="text-3xl font-extrabold tracking-tight md:text-4xl leading-tight">
               How I&apos;m Actually Studying for the CISSP (Without Reading a Single Page)
             </h1>
+            <p className="mt-4 text-sm text-muted-foreground" style={{ fontFamily: 'var(--font-mono)' }}>
+              January 27, 2026
+            </p>
           </header>
 
           <div className="space-y-6 text-base leading-relaxed text-muted-foreground">

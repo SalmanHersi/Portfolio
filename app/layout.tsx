@@ -1,8 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { JetBrains_Mono, Outfit } from 'next/font/google';
-import { ThemeProvider } from '@/components/theme-provider';
-import { Header } from '@/components/Header';
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -31,15 +29,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${outfit.variable} ${jetbrains.variable}`}>
-      <body className="font-sans antialiased" style={{ fontFamily: 'var(--font-outfit), system-ui, sans-serif' }}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-        >
-          <Header />
-          {children}
-        </ThemeProvider>
+    <html lang="en" className={`${outfit.variable} ${jetbrains.variable}`}>
+      <body className="font-sans antialiased bg-background text-foreground" style={{ fontFamily: 'var(--font-outfit), system-ui, sans-serif' }}>
+        {children}
       </body>
     </html>
   );

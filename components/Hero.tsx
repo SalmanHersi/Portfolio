@@ -1,90 +1,100 @@
-'use client';
 import React from 'react';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Mail, Twitter, Shield } from 'lucide-react';
+import { Download, Github, Linkedin, Mail, Twitter } from 'lucide-react';
 import Link from 'next/link';
 
 const Hero = () => {
   return (
-    <section className="relative py-16 md:py-24">
-      <div className="relative flex flex-col items-center gap-14 md:flex-row md:items-center md:justify-between">
-        {/* Text Content */}
-        <div className="flex flex-col items-center space-y-7 text-center md:items-start md:text-left">
-          <div className="animate-fade-up stagger-1">
-            <span
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-4 py-1.5 text-xs font-semibold tracking-[0.2em] uppercase text-foreground/70"
-              style={{ fontFamily: 'var(--font-mono)' }}
-            >
-              <Shield className="h-3.5 w-3.5" />
-              Cloud Security Consultant
+    <section className="py-16 md:py-20">
+      {/* Profile header */}
+      <div className="animate-fade-up stagger-1 flex items-center gap-4 mb-8">
+        <Image
+          className="rounded-full"
+          src="/imgs/headshot.jpg"
+          width={64}
+          height={64}
+          alt="Salman Hersi"
+        />
+        <div>
+          <div className="flex flex-wrap items-center gap-2">
+            <h1 className="text-xl font-semibold">Salman Hersi</h1>
+            <span className="rounded-full border border-brand/30 bg-brand/10 px-2.5 py-0.5 text-xs font-medium text-brand">
+              Open to roles
             </span>
           </div>
-
-          <h1 className="animate-fade-up stagger-2 text-6xl font-extrabold tracking-tight lg:text-8xl text-foreground">
-            Salman
-            <br />
-            Hersi<span className="text-muted-foreground">.</span>
-          </h1>
-
-          {/* Image - visible on all sizes, hidden on md+ via CSS */}
-          <div className="block md:hidden">
-            <Image
-              className="rounded-full ring-1 ring-border"
-              src="/imgs/headshot.jpg"
-              width={240}
-              height={240}
-              alt="Salman Hersi"
-            />
-          </div>
-
-          <p className="animate-fade-up stagger-3 max-w-lg text-lg leading-relaxed text-muted-foreground md:text-xl">
-            Designing Zero Trust architectures, hardening AWS environments, and
-            building secure systems from the ground up.
-          </p>
-
-          <div className="animate-fade-up stagger-4 flex flex-col items-center gap-6 md:items-start">
-            <a href="mailto:hersi.salman@gmail.com">
-              <Button
-                size="lg"
-                className="gap-2.5 rounded-full px-8 text-sm font-semibold transition-all hover:opacity-80 hover:-translate-y-0.5"
-              >
-                <Mail className="h-4 w-4" />
-                Get in touch
-              </Button>
-            </a>
-
-            <div className="flex items-center gap-3">
-              {[
-                { href: 'https://www.linkedin.com/in/salmanhersi/', icon: Linkedin, label: 'LinkedIn' },
-                { href: 'https://github.com/SalmanHersi', icon: Github, label: 'GitHub' },
-                { href: 'https://twitter.com/namlase', icon: Twitter, label: 'Twitter' },
-              ].map(({ href, icon: Icon, label }) => (
-                <Link
-                  key={href}
-                  href={href}
-                  aria-label={label}
-                  className="rounded-full border border-border p-2.5 text-muted-foreground transition-all hover:text-foreground hover:border-foreground/30 hover:-translate-y-0.5"
-                >
-                  <Icon className="h-4 w-4" />
-                </Link>
-              ))}
-            </div>
-          </div>
+          <p className="text-muted-foreground">Cloud + IAM security. Zero Trust. Automation.</p>
         </div>
+      </div>
 
-        {/* Desktop Image */}
-        <div className="hidden flex-shrink-0 md:block animate-slide-in-right stagger-2">
-          <div className="rounded-full p-[2px] bg-gradient-to-br from-foreground/20 via-foreground/5 to-transparent">
-            <Image
-              className="rounded-full"
-              src="/imgs/headshot.jpg"
-              width={320}
-              height={320}
-              alt="Salman Hersi"
-            />
-          </div>
-        </div>
+      {/* Bio */}
+      <div className="animate-fade-up stagger-2 space-y-4 mb-8 max-w-xl">
+        <p className="text-2xl md:text-3xl font-semibold tracking-tight text-foreground">
+          I build automated defenses for cloud environments and design Zero Trust access that scales.
+        </p>
+        <p className="text-base leading-relaxed text-foreground/90">
+          I design Zero Trust architectures and secure cloud environments for enterprise clients.
+          Currently focused on IAM strategy and security automation at Miipe Quality Solutions.
+        </p>
+        <p className="text-base leading-relaxed text-foreground/90">
+          Outside client work, I build automations that help businesses move faster and stay secure.
+        </p>
+      </div>
+
+      {/* Signals */}
+      <div className="animate-fade-up stagger-3 flex flex-wrap gap-2 mb-8">
+        {[
+          'Cloud security (AWS)',
+          'IAM strategy + governance',
+          'Zero Trust architecture',
+          'Security automation',
+          'Detection + response workflows',
+        ].map((signal) => (
+          <span
+            key={signal}
+            className="inline-flex items-center rounded-full border border-border px-3 py-1 text-xs font-medium text-muted-foreground"
+          >
+            {signal}
+          </span>
+        ))}
+      </div>
+
+      {/* Contact & Social */}
+      <div className="animate-fade-up stagger-4 flex flex-wrap items-center gap-3">
+        <a
+          href="mailto:hersi.salman@gmail.com"
+          className="inline-flex items-center gap-2 rounded-full bg-foreground text-background px-4 py-2 text-sm font-medium transition-opacity hover:opacity-80"
+        >
+          <Mail className="h-4 w-4" />
+          hersi.salman@gmail.com
+        </a>
+
+        <a
+          href="https://utfs.io/f/5mHFO6Bp0KeY7wP3Pir8juwnfIT4oFND31Z2SgkemC9Uvbxi"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground hover:border-foreground/30"
+        >
+          <Download className="h-4 w-4" />
+          Download CV
+        </a>
+
+        {[
+          { href: 'https://www.linkedin.com/in/salmanhersi/', icon: Linkedin, label: 'LinkedIn' },
+          { href: 'https://github.com/SalmanHersi', icon: Github, label: 'GitHub' },
+          { href: 'https://twitter.com/namlase', icon: Twitter, label: 'Twitter' },
+        ].map(({ href, icon: Icon, label }) => (
+          <Link
+            key={href}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={label}
+            className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground hover:border-foreground/30"
+          >
+            <Icon className="h-4 w-4" />
+            {label}
+          </Link>
+        ))}
       </div>
     </section>
   );

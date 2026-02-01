@@ -1,14 +1,16 @@
+import Hero from '@/components/Hero';
+import Building from '@/components/Building';
+import Writing from '@/components/Writing';
 import Experience from '@/components/Experience';
 import Footer from '@/components/Footer';
-import Hero from '@/components/Hero';
-import Projects from '@/components/Projects';
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <div className="mx-auto max-w-5xl px-6 md:px-8">
+      <div className="mx-auto max-w-2xl px-6">
         <Hero />
-        <Projects />
+        <Building />
+        <Writing />
         <Experience />
         <Footer />
       </div>
