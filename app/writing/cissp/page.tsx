@@ -3,9 +3,9 @@ import { ArrowLeft } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "How I'm Actually Studying for the CISSP — Salman Hersi",
+  title: 'How I Studied for the CISSP - Salman Hersi',
   description:
-    "How I'm studying for the CISSP without reading a single page, using AI tools like NotebookLM and Claude.",
+    'How I studied for the CISSP without reading a single page, using AI tools like NotebookLM and Claude.',
 };
 
 export default function CISSPArticle() {
@@ -23,7 +23,7 @@ export default function CISSPArticle() {
         <article>
           <header className="mb-12">
             <h1 className="text-3xl font-extrabold tracking-tight md:text-4xl leading-tight">
-              How I&apos;m Actually Studying for the CISSP (Without Reading a Single Page)
+              How I Studied for the CISSP (Without Reading a Single Page)
             </h1>
             <p className="mt-4 text-sm text-muted-foreground" style={{ fontFamily: 'var(--font-mono)' }}>
               January 27, 2026

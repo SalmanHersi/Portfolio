@@ -13,9 +13,9 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Salman Hersi - Security Guy',
+  title: 'Salman Hersi, CISSP - Cybersecurity Analyst',
   description:
-    'Security Guy specializing in vulnerability assessment, threat detection, and risk mitigation. CompTIA Security+ certified.',
+    'CISSP-certified cybersecurity analyst specializing in vulnerability assessment, risk-based remediation, cloud security, SIEM visibility, and CIS/NIST hardening.',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',

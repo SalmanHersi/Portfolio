@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Download, Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import Link from 'next/link';
 
 const Hero = () => {
@@ -17,37 +17,44 @@ const Hero = () => {
         />
         <div>
           <div className="flex flex-wrap items-center gap-2">
-            <h1 className="text-xl font-semibold">Salman Hersi</h1>
+            <h1 className="text-xl font-semibold">Salman Hersi, CISSP</h1>
             <span className="rounded-full border border-brand/30 bg-brand/10 px-2.5 py-0.5 text-xs font-medium text-brand">
               Open to roles
             </span>
           </div>
-          <p className="text-muted-foreground">Cloud + IAM security. Zero Trust. Automation.</p>
+          <p className="text-muted-foreground">Cybersecurity analyst. Cloud security. Risk remediation.</p>
         </div>
       </div>
 
       {/* Bio */}
       <div className="animate-fade-up stagger-2 space-y-4 mb-8 max-w-xl">
         <p className="text-2xl md:text-3xl font-semibold tracking-tight text-foreground">
-          I build automated defenses for cloud environments and design Zero Trust access that scales.
+          I identify security risk, coordinate remediation, and harden enterprise cloud environments.
         </p>
         <p className="text-base leading-relaxed text-foreground/90">
-          I design Zero Trust architectures and secure cloud environments for enterprise clients.
-          Currently focused on IAM strategy and security automation at Miipe Quality Solutions.
+          CISSP-certified cybersecurity analyst with 5+ years across vulnerability assessment,
+          configuration hardening, IAM, cloud security, and incident response.
         </p>
         <p className="text-base leading-relaxed text-foreground/90">
-          Outside client work, I build automations that help businesses move faster and stay secure.
+          Currently at Miipe Quality Solutions, supporting enterprise clients with risk-based
+          remediation roadmaps, security standards, AWS guardrails, and SIEM visibility in Splunk
+          and Microsoft Sentinel.
+        </p>
+        <p className="text-base leading-relaxed text-foreground/90">
+          I am also pursuing a Master of Science in Cybersecurity at Georgia Tech, with expected
+          graduation in August 2028.
         </p>
       </div>
 
       {/* Signals */}
       <div className="animate-fade-up stagger-3 flex flex-wrap gap-2 mb-8">
         {[
-          'Cloud security (AWS)',
-          'IAM strategy + governance',
-          'Zero Trust architecture',
-          'Security automation',
-          'Detection + response workflows',
+          'Vulnerability assessment',
+          'Risk-based remediation',
+          'CIS + NIST hardening',
+          'Splunk + Sentinel',
+          'AWS + Azure security',
+          'PowerShell + Python',
         ].map((signal) => (
           <span
             key={signal}
@@ -69,14 +76,17 @@ const Hero = () => {
         </a>
 
         <a
-          href="https://utfs.io/f/5mHFO6Bp0KeY7wP3Pir8juwnfIT4oFND31Z2SgkemC9Uvbxi"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="tel:+16476062184"
           className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground hover:border-foreground/30"
         >
-          <Download className="h-4 w-4" />
-          Download CV
+          <Phone className="h-4 w-4" />
+          (647) 606-2184
         </a>
+
+        <span className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium text-muted-foreground">
+          <MapPin className="h-4 w-4" />
+          Toronto, ON
+        </span>
 
         {[
           { href: 'https://www.linkedin.com/in/salmanhersi/', icon: Linkedin, label: 'LinkedIn' },

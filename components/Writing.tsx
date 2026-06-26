@@ -32,7 +32,7 @@ export default function Writing() {
 
       <div className="space-y-3 animate-fade-up stagger-1">
         <ArticleItem
-          title="How I'm studying for my CISSP"
+          title="How I studied for my CISSP"
           date="January 2026"
           href="/writing/cissp"
         />
