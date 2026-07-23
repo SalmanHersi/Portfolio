@@ -39,7 +39,7 @@ function ComptiaLogo() {
 
 export default function Experience() {
   const cvUrl =
-    'https://sufrvxd5wt.ufs.sh/f/5mHFO6Bp0KeY6ba8dcAOvqsom63IADukJZrM2QEahF95cTNS';
+    'https://sufrvxd5wt.ufs.sh/f/5mHFO6Bp0KeYdgzFdhc3gBE4l8hZqFUSfd2kX9tGJnsi7YKM';
 
   const certifications = [
     {
