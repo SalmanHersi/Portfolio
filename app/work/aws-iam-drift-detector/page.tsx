@@ -5,10 +5,18 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'AWS IAM Drift Detector - Salman Hersi',
   description:
-    'Serverless automation that detects risky IAM changes and triggers response workflows.',
+    'An event-driven AWS workflow that scores IAM changes, explains the risk, and routes response through n8n.',
 };
 
-const stack = ['AWS', 'IAM', 'Lambda', 'EventBridge', 'CloudTrail', 'n8n'];
+const stack = [
+  'AWS',
+  'IAM',
+  'Lambda',
+  'EventBridge',
+  'CloudTrail',
+  'n8n',
+  'Security Automation',
+];
 
 export default function AwsIamDriftDetectorPage() {
   return (
@@ -28,7 +36,8 @@ export default function AwsIamDriftDetectorPage() {
               AWS IAM Drift Detector
             </h1>
             <p className="text-base text-muted-foreground">
-              What happens when you let engineers ship fast but still want to sleep at night.
+              An event-driven workflow that catches risky IAM changes, explains what changed, and
+              routes the response through n8n with human approval where it matters.
             </p>
             <div className="flex flex-wrap gap-2">
               {stack.map((item) => (
@@ -43,73 +52,135 @@ export default function AwsIamDriftDetectorPage() {
           </header>
 
           <section className="space-y-6 text-base leading-relaxed text-muted-foreground">
+            <h2 className="text-xl font-semibold text-foreground">
+              The problem I wanted to solve
+            </h2>
             <p>
-              So here&apos;s the thing. Every org I&apos;ve worked with has the same problem: devs need
-              to move fast, security wants to review everything, and nobody has time for the
-              back-and-forth. IAM changes especially. Someone adds a policy, it ships, and three
-              weeks later you find out it grants admin to half the account.
+              IAM drift usually starts with a reasonable request. Someone needs access, a policy
+              changes, and the work moves forward. The exception can stay long after the original
+              need is gone, leaving the account with more access than anyone intended.
             </p>
 
             <p>
-              I got tired of finding these things manually. Scrolling through CloudTrail logs at
-              2am because something felt off. There had to be a better way.
+              Manual CloudTrail review made that gap easy to miss. I built the IAM Drift Detector
+              to catch changes as they happen, evaluate the risk, and give the reviewer enough
+              context to decide what should happen next.
             </p>
 
             <p>
-              The idea was simple: catch IAM changes the moment they happen, figure out if
-              they&apos;re risky, and do something about it before anyone has to ask. No dashboards
-              to check. No weekly reviews. Just automated guardrails that actually work.
+              The goal is a shorter path from an IAM change to a useful security decision.
+              Engineers can keep moving while high-risk changes get attention quickly.
+            </p>
+
+            <h2 className="text-xl font-semibold text-foreground">How the event flow works</h2>
+            <ol className="list-decimal pl-6 space-y-2">
+              <li>CloudTrail records activity affecting IAM users, roles, and policies.</li>
+              <li>EventBridge matches the relevant events and sends them to Lambda.</li>
+              <li>
+                Lambda extracts the actor, account, region, affected resource, and policy change.
+              </li>
+              <li>The function checks the change for risk signals and assigns a severity.</li>
+              <li>n8n routes the result to the appropriate response workflow.</li>
+            </ol>
+
+            <p>
+              This design keeps each part focused. EventBridge handles event routing, Lambda
+              handles normalization and scoring, and n8n handles notifications and response. That
+              separation makes it easier to test the scoring logic without triggering every
+              downstream action.
+            </p>
+
+            <h2 className="text-xl font-semibold text-foreground">
+              How the risk scoring works
+            </h2>
+            <p>
+              My first version treated too many changes as high risk. It found activity, but it
+              did not give a reviewer enough help deciding which events deserved attention.
             </p>
 
             <p>
-              I wired up EventBridge to listen for IAM events from CloudTrail. Every time someone
-              touches a policy, role, or user, it fires. A Lambda picks it up and starts asking
-              questions. Who made this change? What did they actually modify? Does this grant
-              wildcard permissions? Can this role assume into other accounts? Is this touching
-              sensitive services like KMS or Secrets Manager?
+              I tuned the scoring around context. A wildcard attached to a narrow read action is
+              different from <code>iam:*</code>. A change made by an expected CI service role is
+              different from the same change made by an IAM user at an unusual time. Cross-account
+              trust and access to services such as KMS or Secrets Manager also deserve more
+              scrutiny.
+            </p>
+
+            <p>The detector evaluates details such as:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>The identity that made the change</li>
+              <li>The affected account, region, user, role, or policy</li>
+              <li>The policy before and after the change</li>
+              <li>Wildcard actions or resources</li>
+              <li>Cross-account role assumptions and trust changes</li>
+              <li>Access to IAM, KMS, Secrets Manager, and other sensitive services</li>
+            </ul>
+
+            <p>
+              The result is a severity based on the change and the context around it. High-severity
+              events create a ticket, post the details to Slack, and can start a rollback workflow.
+              Medium-severity events enter a review queue. Low-severity events stay recorded so I
+              can look for patterns and continue tuning the rules.
+            </p>
+
+            <h2 className="text-xl font-semibold text-foreground">
+              Human approval before rollback
+            </h2>
+            <p>
+              Blindly reverting an IAM change can break a legitimate workload. A risky-looking
+              policy might be temporary, expected, and tied to active work. I added an approval
+              gate before rollback so the workflow can flag the change, pause, and wait for a
+              person to confirm the action.
             </p>
 
             <p>
-              The scoring part took the longest to get right. First version flagged everything.
-              Useless. Teams ignored it after day two. So I started tuning. Wildcards on
-              s3:GetObject? Probably fine. Wildcards on iam:*? That&apos;s a problem. Context
-              matters. A change from a CI pipeline service role hits different than a change from
-              some random IAM user at 3am.
+              That guardrail keeps the response fast without giving the automation permission to
+              make every final decision. The system collects the evidence and prepares the action.
+              A person controls the destructive step.
+            </p>
+
+            <h2 className="text-xl font-semibold text-foreground">
+              Making the alert useful
+            </h2>
+            <p>
+              Raw CloudTrail JSON slows down the first few minutes of an investigation. Each alert
+              includes the identity that made the change, the account and region, the affected
+              resource, the policy before and after, the assigned severity, and the reasons behind
+              the score.
             </p>
 
             <p>
-              Once I had signal I could trust, I piped it into n8n for the response workflows.
-              High severity stuff creates a ticket, posts to Slack with the full context, and
-              optionally triggers a rollback. Medium severity gets logged and queued for review.
-              Low severity just gets tracked so we can spot patterns later.
+              That summary gives the reviewer a starting point without requiring them to search
+              through the original event first. The raw event is still available when they need
+              the full record.
+            </p>
+
+            <h2 className="text-xl font-semibold text-foreground">
+              What this project demonstrates
+            </h2>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Monitoring AWS control-plane activity with CloudTrail</li>
+              <li>Routing security events with EventBridge</li>
+              <li>Parsing and scoring IAM changes in Lambda</li>
+              <li>Reviewing policy scope, wildcard access, and cross-account trust</li>
+              <li>Separating detection logic from response orchestration</li>
+              <li>Building severity-based workflows in n8n</li>
+              <li>Adding human approval before a rollback</li>
+              <li>Turning raw cloud events into investigation-ready alerts</li>
+            </ul>
+
+            <h2 className="text-xl font-semibold text-foreground">What I learned</h2>
+            <p>
+              I ran the detector for several months and used it to surface a handful of issues that
+              manual review could have missed. The scoring needed the most iteration. Detection
+              without context produced noise, and automation without an approval boundary created
+              unnecessary risk.
             </p>
 
             <p>
-              The rollback piece was tricky. You can&apos;t just revert IAM changes blindly.
-              Sometimes the &quot;risky&quot; change is intentional and the team knows what
-              they&apos;re doing. So I added approval gates. Flag it, pause it, let a human
-              confirm before anything gets reverted. Automation with a kill switch.
-            </p>
-
-            <p>
-              What actually made this useful was the summaries. Nobody wants to read raw JSON
-              diffs. So every alert includes: who made the change, what account and region, what
-              the policy looked like before and after, and why the system thinks it&apos;s risky.
-              One glance and you know if you need to care.
-            </p>
-
-            <p>
-              Ran this for a few months now. Caught a handful of real issues that would&apos;ve
-              slipped through manual review. More importantly, it let teams ship faster because
-              they knew the guardrails were there. They didn&apos;t have to wait for security to
-              approve every change. They just shipped, and if something was off, the system
-              caught it.
-            </p>
-
-            <p>
-              Still tweaking the rules. Still dealing with edge cases. But the core loop works.
-              Change happens, system evaluates, response fires if needed. Simple when you say it
-              like that. Getting there was the hard part.
+              I am still tuning edge cases, but the working path is clear. An IAM change creates an
+              event, Lambda evaluates it, n8n routes the response, and the workflow pauses for human
+              approval before a rollback when the decision could affect a live workload.
             </p>
           </section>
         </article>

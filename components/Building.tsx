@@ -83,7 +83,7 @@ export default function Building() {
         <ProjectItem
           icon={<AwsIcon className="h-6 w-6" />}
           title="AWS IAM Drift Detector"
-          description="Serverless automation that audits IAM changes, flags risky policy drift, and kicks off response workflows."
+          description="Event-driven AWS monitoring that scores IAM changes and routes risky drift through n8n with human approval."
           href="/work/aws-iam-drift-detector"
           tags={['AWS', 'Lambda', 'EventBridge', 'IAM']}
         />
