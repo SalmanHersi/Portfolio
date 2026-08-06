@@ -89,8 +89,8 @@ export default function Building() {
         />
         <ProjectItem
           icon={<Receipt className="h-5 w-5" />}
-          title="How I Spent $300 on a Mini PC to Learn Cybersecurity"
-          description="A Marketplace mini PC became a Proxmox lab for detections, automation, and response practice."
+          title="How I Turned a $300 Mini PC into a Detection Engineering Lab"
+          description="A Marketplace mini PC became a Proxmox lab for networking, detection testing, and automated response."
           href="/work/proxmox-detection-automation"
           tags={['Proxmox', 'SIEM', 'n8n', 'Automation']}
         />
