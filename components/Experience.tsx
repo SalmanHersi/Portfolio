@@ -39,7 +39,7 @@ function ComptiaLogo() {
 
 export default function Experience() {
   const cvUrl =
-    'https://sufrvxd5wt.ufs.sh/f/5mHFO6Bp0KeYmSGms6YxFGk2ZRHfNr9EDUvOQ506TWSzcmoK';
+    '/Salman_Hersi_Resume.pdf';
 
   const certifications = [
     {
